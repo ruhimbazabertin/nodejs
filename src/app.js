@@ -11,6 +11,7 @@ const hbs     = require('hbs');
 
 const app = express();
 
+const port = process.env.PORT || 3000;
 //Define paths for express config
 const directoryPath = path.join(__dirname,'../public');
 const viewTemplatePath = path.join(__dirname,'../templates/views');
@@ -107,7 +108,7 @@ res.send('My page 404.');
 
 
     
-app.listen(3000,()=>{
+app.listen(port,()=>{
 
-    console.log('This app is running on 3000 port.');
+    console.log('This app is running '+port);
 })
